@@ -2,7 +2,7 @@
 
 A modern, responsive travel agency landing page built with Next.js 15, TypeScript, and Tailwind CSS. This project showcases a complete travel booking website with beautiful UI components and smooth user interactions.
 
-![Travello Preview](https://via.placeholder.com/800x400/177BA5/FFFFFF?text=Travello+Travel+Agency)
+<img width="1916" height="1224" alt="Image" src="https://github.com/user-attachments/assets/d9607ccc-cffb-48f5-8777-df8b199333e8" />
 
 ## ✨ Features
 
@@ -15,10 +15,6 @@ A modern, responsive travel agency landing page built with Next.js 15, TypeScrip
 - **🖼️ Image Optimization**: Next.js Image component for optimal performance
 - **🎭 Interactive Elements**: Smooth animations and hover effects
 - **📊 Design System**: Consistent colors, typography, and spacing
-
-## 🚀 Live Demo
-
-[View Live Demo](https://travello-hakangokdev.vercel.app) *(Replace with your actual deployment URL)*
 
 ## 🛠️ Tech Stack
 
