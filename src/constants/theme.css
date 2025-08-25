@@ -1,0 +1,227 @@
+/* Travel Agency Theme CSS Variables */
+:root {
+  /* Colors */
+  --color-primary: #177BA5;
+  --color-primary-blue: #177BA5;
+  
+  --color-bg-primary: #F6F6F6;
+  --color-bg-white: #FFFFFF;
+  --color-bg-black: #000000;
+  
+  --color-text-primary: #292D32;
+  --color-text-secondary: #292929;
+  --color-text-white: #FFFFFF;
+  --color-text-black: #000000;
+  --color-text-light: #F5F5F5;
+  
+  --color-accent-green-light: #D6EDEB;
+  --color-accent-green-dark: #2D8985;
+  --color-accent-pink-light: #FCDDEC;
+  --color-accent-pink-dark: #F178B6;
+  
+  --color-gray-primary: #292D32;
+  --color-gray-secondary: #292929;
+  --color-gray-light: #F5F5F5;
+  --color-gray-background: #F6F6F6;
+  
+  --color-brand-primary: #177BA5;
+  --color-brand-secondary: #2D8985;
+  --color-brand-accent-1: #F178B6;
+  --color-brand-accent-2: #D6EDEB;
+  --color-brand-accent-3: #FCDDEC;
+
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-display: 'Abril Fatface', serif;
+  --font-secondary: 'Rubik', sans-serif;
+  --font-body: 'Lato', sans-serif;
+  
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  
+  --font-size-display: 90px;
+  --font-size-h1: 56px;
+  --font-size-h2: 48px;
+  --font-size-h3: 40px;
+  --font-size-body: 24px;
+  --font-size-caption: 20px;
+  
+  --line-height-display: 1.35em;
+  --line-height-heading: 1.5em;
+  --line-height-body: 1.5em;
+  --line-height-caption: 1.4em;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-xxxl: 64px;
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 50%;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Breakpoints */
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1200px;
+}
+
+/* Typography Classes */
+.text-display {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
+  text-transform: uppercase;
+}
+
+.text-h1 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+}
+
+.text-h2 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+}
+
+.text-h3 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+}
+
+.text-body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  text-transform: uppercase;
+}
+
+.text-caption {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  text-transform: uppercase;
+}
+
+/* Color Classes */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-white { color: var(--color-text-white); }
+.text-light { color: var(--color-text-light); }
+
+.bg-primary { background-color: var(--color-bg-primary); }
+.bg-white { background-color: var(--color-bg-white); }
+.bg-black { background-color: var(--color-bg-black); }
+.bg-brand { background-color: var(--color-brand-primary); }
+.bg-accent-green { background-color: var(--color-accent-green-light); }
+.bg-accent-pink { background-color: var(--color-accent-pink-light); }
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-white);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-primary);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgba(23, 123, 165, 0.8);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--color-brand-secondary);
+  color: var(--color-text-white);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-primary);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(45, 137, 133, 0.8);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--color-bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-xl);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-accent {
+  background-color: var(--color-accent-green-light);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--color-accent-green-dark);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --font-size-display: 60px;
+    --font-size-h1: 40px;
+    --font-size-h2: 32px;
+    --font-size-h3: 28px;
+    --font-size-body: 18px;
+    --font-size-caption: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-display: 48px;
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-h3: 24px;
+    --font-size-body: 16px;
+    --font-size-caption: 14px;
+  }
+}

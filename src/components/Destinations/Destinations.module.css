@@ -1,0 +1,270 @@
+.destinations {
+  width: 100%;
+  padding: 80px 0;
+  background-color: var(--color-bg-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Text Content */
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 32px;
+  width: 423px;
+  height: 353px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
+  color: var(--color-text-primary);
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.description {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: 24px;
+  line-height: 1.5em;
+  color: var(--color-text-primary);
+  text-align: justify;
+  margin: 0;
+  width: 100%;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  gap: 0;
+  width: 100px;
+  height: 50px;
+}
+
+.navButton {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.prevButton {
+  background-color: rgba(41, 45, 50, 0.1);
+  color: rgba(41, 45, 50, 0.5);
+  border-radius: 8px 0 0 8px;
+}
+
+.nextButton {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-white);
+  border-radius: 0 8px 8px 0;
+}
+
+.navButton:hover {
+  transform: scale(1.05);
+}
+
+.prevButton:hover {
+  background-color: rgba(41, 45, 50, 0.2);
+}
+
+.nextButton:hover {
+  background-color: rgba(23, 123, 165, 0.8);
+}
+
+/* Destinations Holder */
+.destinationsHolder {
+  display: flex;
+  gap: 32px;
+  width: 671px;
+  overflow: hidden;
+}
+
+/* Destination Card */
+.destinationCard {
+  position: relative;
+  width: 217px;
+  height: 353px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.destinationCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.destinationImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 68%, rgba(0, 0, 0, 1) 83%);
+  pointer-events: none;
+}
+
+.destinationName {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5em;
+  color: var(--color-text-white);
+  text-align: center;
+  margin: 0;
+  z-index: 2;
+}
+
+/* Active state */
+.destinationCard.active {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 30px 0px rgba(23, 123, 165, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .textContent {
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+  
+  .title,
+  .description {
+    text-align: center;
+  }
+  
+  .destinationsHolder {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .destinations {
+    padding: 60px 0;
+  }
+  
+  .container {
+    gap: 32px;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .description {
+    font-size: 18px;
+  }
+  
+  .destinationsHolder {
+    gap: 20px;
+  }
+  
+  .destinationCard {
+    width: 180px;
+    height: 280px;
+  }
+  
+  .destinationName {
+    font-size: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .destinations {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 16px;
+    gap: 24px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+  
+  .destinationsHolder {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .destinationCard {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+  }
+  
+  .destinationName {
+    font-size: 18px;
+    bottom: 16px;
+  }
+  
+  .navigation {
+    width: 80px;
+    height: 40px;
+  }
+  
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .navButton svg {
+    width: 18px;
+    height: 18px;
+  }
+}

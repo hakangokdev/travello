@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Colors */
+  --color-primary: #177BA5;
+  --color-primary-blue: #177BA5;
+  
+  --color-bg-primary: #F6F6F6;
+  --color-bg-white: #FFFFFF;
+  --color-bg-black: #000000;
+  
+  --color-text-primary: #292D32;
+  --color-text-secondary: #292929;
+  --color-text-white: #FFFFFF;
+  --color-text-black: #000000;
+  --color-text-light: #F5F5F5;
+  
+  --color-accent-green-light: #D6EDEB;
+  --color-accent-green-dark: #2D8985;
+  --color-accent-pink-light: #FCDDEC;
+  --color-accent-pink-dark: #F178B6;
+  
+  --color-gray-primary: #292D32;
+  --color-gray-secondary: #292929;
+  --color-gray-light: #F5F5F5;
+  --color-gray-background: #F6F6F6;
+  
+  --color-brand-primary: #177BA5;
+  --color-brand-secondary: #2D8985;
+  --color-brand-accent-1: #F178B6;
+  --color-brand-accent-2: #D6EDEB;
+  --color-brand-accent-3: #FCDDEC;
+
+  /* Typography - using CSS variables from Next.js font loading */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  
+  --font-size-display: 90px;
+  --font-size-h1: 56px;
+  --font-size-h2: 48px;
+  --font-size-h3: 40px;
+  --font-size-body: 24px;
+  --font-size-caption: 20px;
+  
+  --line-height-display: 1.35em;
+  --line-height-heading: 1.5em;
+  --line-height-body: 1.5em;
+  --line-height-caption: 1.4em;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-xxxl: 64px;
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 50%;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Breakpoints */
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1200px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-display: 60px;
+    --font-size-h1: 40px;
+    --font-size-h2: 32px;
+    --font-size-h3: 28px;
+    --font-size-body: 18px;
+    --font-size-caption: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-display: 48px;
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-h3: 24px;
+    --font-size-body: 16px;
+    --font-size-caption: 14px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset default styles */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
